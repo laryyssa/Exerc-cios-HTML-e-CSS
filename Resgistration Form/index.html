@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +9,37 @@
 </head>
 <body>
     <h1>Formulário</h1>
-    <p>Please fill out this form with the required information</p>
+    <p>Complete o formulário com suas informações</p>
     <form action="https://register-demo.freecodecamp.org">
         <fieldset>
-            <label for="">Insira seu primeiro nome: <input type="text" required="input"></label>
-            <label for="">Insira seu sobrenome: <input type="text" required="input"></label>
-            <label for="">Insira seu Email: <input type="email" required="input"></label>
-            <label for="">Crie uma nova senha: <input type="password" required="input"></label>
+            <label for="">Insira seu primeiro nome: <input type="text" required="input" name="first-name"></label>
+            <label for="">Insira seu sobrenome: <input type="text" required="input" name="last-name"></label>
+            <label for="">Insira seu Email: <input type="email" required="input" name="email"></label>
+            <label for="">Crie uma senha: <input type="password" pattern="[a-z0-5]{8,}" name="password"></label>
             
         </fieldset>
         <fieldset>
-
+            <label for=""><input type="radio" name="account-type"> Conta Pessoal</label>
+            <label for=""><input type="radio" name="account-type"> Conta da Empresa</label>
+            <label for=""><input type="checkbox" name="termos-e-condicoes" required> Aceito <a href="https://lh5.googleusercontent.com/3K7NVrpubuVMP5a0YMRfIrXvjRa6VsXOyIVRb2h9BuYnLSs22QU7eUTJD4Da_LPEPxrkyJRVrMl5kTDXXTTPyu0DEtjO91pSUQbVbfNN8NrA7ThRnIyxWkvH4Rit2kHSalRzJIE8">Termos e Condições</a></label>
         </fieldset>
         <fieldset>
-            
+            <label for="">Insira uma imagem: <input type="file" value="Clique " name="image"></label>
+            <label for="">Informe sua idade: <input type="number" min="13" max="120" name="age"></label>
+            <label for="">De onde você me conhece?
+            <select name="conhece" id="">
+                <option value="">(escolha um)</option>
+                <option value="1">Faculdade</option>
+                <option value="2">Escola</option>
+                <option value="3">Família</option>
+                <option value="4">Outro</option>
+            </select>
+            </label>
+            <label for="">Me escreva uma mensagem
+                <textarea name="" id="" cols="30" rows="3" placeholder="A laryssa é linda uau como é inteligente tbm mds"></textarea>
+            </label>
         </fieldset>
-        <input type="submit" value="Enviar"/>
+        <input name="msg" type="submit" value="Enviar"/>
     </form>
 </body>
 </html>
